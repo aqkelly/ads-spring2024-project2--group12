@@ -5,25 +5,46 @@ if (!require("shiny")) {
 }
 if (!require("shinydashboard")) {
   install.packages("shinydashboard")
-  library(shiny)
+  library(shinydashboard)
 }
 if (!require("dplyr")) {
   install.packages("dplyr")
-  library(shiny)
+  library(dplyr)
 }
 if (!require("ggplot2")) {
   install.packages("ggplot2")
-  library(shiny)
+  library(ggplot2)
 }
 if (!require("tidyverse")) {
   install.packages("tidyverse")
-  library(shiny)
+  library(tidyverse)
 }
 if (!require("lubridate")) {
   install.packages("lubridate")
-  library(shiny)
+  library(lubridate)
+}
+if (!require("leaflet")) {
+  install.packages("leaflet")
+  library(leaflet)
+}
+if (!require("RColorBrewer")) {
+  install.packages("RColorBrewer")
+  library(RColorBrewer)
+}
+if (!require("lubridate")) {
+  install.packages("lubridate")
+  library("lubridate")
+}
+if (!require("usmap")) {
+  install.packages("usmap")
+  library("usmap")
+}
+if (!require("shinyWidgets")) {
+  install.packages("shinyWidgets")
+  library("shinyWidgets")
 }
 
+## -----------------------------------Import data-----------------------------------------
 data <- read.csv("DisasterDeclarationsSummaries.csv")
 data_clean <- na.omit(data)
 
@@ -40,6 +61,26 @@ ny_data <- filter(data_clean, state == "NY") %>%
 # Get the range of all years
 years_range <- range(ny_data$Year)
 
+df_select <- read.csv('cleaned_data.csv')
+incidents_per_county <- df_select %>%
+  group_by(county, fipsCountyCode) %>%
+  summarise(incidentCount = n()) %>%
+  arrange(desc(incidentCount))
+
+incidents_per_county <- incidents_per_county %>%
+  mutate(state = "NY")
+
+incidents_per_county$fips <- sprintf("%02d%03d", 36, incidents_per_county$fipsCountyCode)
+
+plot_usmap(data = incidents_per_county, values = "incidentCount", include = c("NY"), color = "blue") + 
+  scale_fill_continuous(low = "yellow", high = "red", name = "Total Incidents", labels = scales::comma) + 
+  labs(title = "New York Region", subtitle = "Total Number of Incidents by County") +
+  theme(legend.position = "right")
+
+#########################################################################
+##
+##                                UI
+#########################################################################
 
 ui <- dashboardPage(skin = "blue",
   dashboardHeader(title = "Disaster Summaries"),
@@ -121,11 +162,22 @@ ui <- dashboardPage(skin = "blue",
                                 value = years_range, # Default to full range
                                 step = 1, sep = '')),
                   mainPanel(plotOutput("programPlot"))))
-              )
+              ),
+      
+      # ------------------ Recovery Program ----------------------------------------------
+      tabItem(tabName = "damage",
+              h2("New York Region - Total Number of Incidents by County", align = 'center'),
+              plotOutput("incidentsMap")
+      )
+      
       )
     )
   )
 
+#########################################################################
+##
+##                                Server
+#########################################################################
 
 server <- function(input, output) {
   
@@ -181,8 +233,16 @@ server <- function(input, output) {
   })
   
   
-  output$plot_damage <- renderPlot({
-    hist(data())
+  output$incidentsMap <- renderPlot({ # Use renderPlot for plotting
+    # Your data preparation steps should go here
+    # Ensure incidents_per_county is defined and contains the expected data
+    
+    # Placeholder for the plotting logic, assuming incidents_per_county is ready
+    # You should replace the below example with your actual plotting code
+    plot_usmap(data = incidents_per_county, values = "incidentCount", include = c("NY"), color = "blue") + 
+      scale_fill_continuous(low = "yellow", high = "red", name = "Total Incidents", labels = scales::comma) + 
+      labs(title = "New York Region", subtitle = "Total Number of Incidents by County") +
+      theme(legend.position = "right")
   })
   
   observeEvent(input$regen, {
