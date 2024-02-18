@@ -86,6 +86,7 @@ ui <- dashboardPage(skin = "blue",
   dashboardHeader(title = "Disaster Summaries"),
   dashboardSidebar(
     sidebarMenu(
+      menuItem("Beginning", tabName = "begin", icon = icon("home")),
       menuItem("Introduction", tabName = "intro", icon = icon("home")),
       menuItem("Disaster Types", tabName = "type", icon = icon("square-poll-vertical")),
       menuItem("Recovery Programs", tabName = "program", icon = icon("chart-pie")),
@@ -95,6 +96,27 @@ ui <- dashboardPage(skin = "blue",
   
   dashboardBody(
     tabItems(
+      # ------------------ Beginning ---------------------------------------------------
+      tabItem(tabName = "begin",
+        tags$img(
+          src = "https://assets-lbmjournal-com.s3.us-east-2.amazonaws.com/2023/09/PLM-Featured-Image.jpg",
+          width = "100%",
+          style = "opacity: 0.90"
+        ),
+        fluidRow(
+          absolutePanel(
+            style = "background-color: white",
+            top = "40%",
+            left = "25%",
+            right = "25%",
+            height = 170,
+            tags$p(
+              style = "padding: 5%; background-color: white; font-family: alegreya; font-size: 120%",
+              "The image presents a powerful tableau of nature's most dramatic and formidable expressions. The skies and earth converge in a quartet of tumultuous events, each scene a testament to the immense energy and raw power of the natural world."
+            )
+          )
+        )
+      ),
       # ------------------ Introduction ---------------------------------------------------
       
       tabItem(tabName = "intro", 
