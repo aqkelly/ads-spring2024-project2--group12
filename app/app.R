@@ -95,27 +95,32 @@ ui <- dashboardPage(skin = "blue",
   ),
   
   dashboardBody(
+    tags$head(
+      tags$style(HTML("
+      #page { 
+        background-size: cover; 
+        height: 100vh; 
+      }
+      .first-bg { 
+        background-image: url('https://assets-lbmjournal-com.s3.us-east-2.amazonaws.com/2023/09/PLM-Featured-Image.jpg'); 
+      }
+    "))
+    ),
+    
     tabItems(
       # ------------------ Beginning ---------------------------------------------------
-      tabItem(tabName = "begin",
-        tags$img(
-          src = "https://assets-lbmjournal-com.s3.us-east-2.amazonaws.com/2023/09/PLM-Featured-Image.jpg",
-          width = "100%",
-          style = "opacity: 0.90"
-        ),
+      tabItem(tabName = "begin", div(id = "page", class = 'first-bg', 
         fluidRow(
           absolutePanel(
             style = "background-color: white",
-            top = "40%",
+            top = "45%",
             left = "25%",
             right = "25%",
-            height = 170,
+            height = 150,
             tags$p(
               style = "padding: 5%; background-color: white; font-family: alegreya; font-size: 120%",
               "The image presents a powerful tableau of nature's most dramatic and formidable expressions. The skies and earth converge in a quartet of tumultuous events, each scene a testament to the immense energy and raw power of the natural world."
-            )
-          )
-        )
+            ))))
       ),
       # ------------------ Introduction ---------------------------------------------------
       
