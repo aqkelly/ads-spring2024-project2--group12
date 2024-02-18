@@ -86,11 +86,11 @@ ui <- dashboardPage(skin = "blue",
   dashboardHeader(title = "Disaster Summaries"),
   dashboardSidebar(
     sidebarMenu(
-      menuItem("Beginning", tabName = "begin", icon = icon("home")),
+      menuItem("Beginning", tabName = "begin", icon = icon("compass")),
       menuItem("Introduction", tabName = "intro", icon = icon("home")),
       menuItem("Disaster Types", tabName = "type", icon = icon("square-poll-vertical")),
-      menuItem("Recovery Programs", tabName = "program", icon = icon("chart-pie")),
-      menuItem("House Damage", tabName = "damage", icon = icon("city"))
+      menuItem("House Incident Map", tabName = "damage", icon = icon("city")),
+      menuItem("Recovery Programs", tabName = "program", icon = icon("chart-pie"))
     )
   ),
   
@@ -193,7 +193,13 @@ ui <- dashboardPage(skin = "blue",
                                 "Select Year Range:",
                                 min = years_range[1], max = years_range[2],
                                 value = years_range, # Default to full range
-                                step = 1, sep = '')),
+                                step = 1, sep = ''),
+                    h4("Program Introduction"),
+                    h5("IH: Individual Housing"),
+                    h5("IA: Individual Assistance"),
+                    h5("PA: Public Assistance"),
+                    h5("HM: Hazard Mitigation")
+                    ),
                   mainPanel(plotOutput("programPlot"))))
               ),
       

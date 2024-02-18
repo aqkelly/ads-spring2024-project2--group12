@@ -5,7 +5,7 @@ account: dataevan
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 11259831
-bundleId: 8269136
+bundleId: 8269331
 url: https://dataevan.shinyapps.io/Shinyapp-12/
 version: 1
 asMultiple: FALSE
