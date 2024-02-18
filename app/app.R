@@ -90,8 +90,7 @@ ui <- dashboardPage(skin = "blue",
       menuItem("Introduction", tabName = "intro", icon = icon("home")),
       menuItem("Disaster Types", tabName = "type", icon = icon("square-poll-vertical")),
       menuItem("Recovery Programs", tabName = "program", icon = icon("chart-pie")),
-      menuItem("House Damage", tabName = "damage", icon = icon("city")),
-      menuItem("Reference", tabName = "ref", icon = icon("city"))
+      menuItem("House Damage", tabName = "damage", icon = icon("city"))
     )
   ),
   
@@ -143,12 +142,14 @@ ui <- dashboardPage(skin = "blue",
                         more informed decisions, optimizing the allocation of resources to areas most
                         in need and improving disaster response and preparedness strategies."))),
         
-        fluidRow(box(width = 15, title = "Targeted User", status = "primary", 
+        fluidRow(box(width = 15, title = "Targeted User & Usage", status = "primary", 
                      solidHeader=TRUE,
-                     h5("We want to create an app for government agency for them to quickly 
-                        summarize the historical disaster data, and use these data to do further
-                        analysis such as funding desicion and budgeting."
-                        ))),
+                     HTML(
+                       "<h5> Government agenct </h5>
+                       <h5> <p><li>summarize the historical disaster data</a></li></h5>
+                       <h5><li>making funding desicion</a></li></h5>
+                       <h5><li>budgeting</a></li></h5>"
+                     ))),
         
         fluidRow(box(width = 15, title = "Reference", status = "primary", 
                      solidHeader=TRUE,
@@ -156,7 +157,7 @@ ui <- dashboardPage(skin = "blue",
                        "<h3> Data Sources </h3>
                        <h5> <p><li>Disaster Declarations Summaries: <a href='https://www.fema.gov/openfema-data-page/disaster-declarations-summaries-v2'>Link</a></li></h4>
                        <h5><li>Housing Assistance Program Data - Owners: <a href='https://www.fema.gov/openfema-data-page/housing-assistance-program-data-owners-v2'> Link</a></li></h4>"
-                     ),
+                     )
                      )),
         
         h5("By Jiaqi Lu, Tianyi Jiang, Yuqi Liu, Guanbiao Li"))),
@@ -200,29 +201,10 @@ ui <- dashboardPage(skin = "blue",
       tabItem(tabName = "damage",
               h2("New York Region - Total Number of Incidents by County", align = 'center'),
               plotOutput("incidentsMap")
-      ),
-      
-      # ------------------ Reference ----------------------------------------------
-      tabItem(tabName = "ref", div(id = "page", class = 'second-bg', 
-                                     fluidRow(
-                                       absolutePanel(
-                                         style = "background-color: white",
-                                         top = "45%",
-                                         left = "25%",
-                                         right = "25%",
-                                         height = 150,
-                                         tags$p(
-                                           style = "padding: 1%; background-color: white; font-family: alegreya; font-size: 120%",
-                                           HTML(
-                                             "<h3> Data Sources </h3>
-                                             <h5> <p><li>Disaster Declarations Summaries: <a href='https://www.fema.gov/openfema-data-page/disaster-declarations-summaries-v2'>Link</a></li></h4>
-                                             <h5><li>Housing Assistance Program Data - Owners: <a href='https://www.fema.gov/openfema-data-page/housing-assistance-program-data-owners-v2'> Link</a></li></h4>"
-                                           )
-                                         ))))
+      )
       )
       )
     )
-  )
 
 #########################################################################
 ##
