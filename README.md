@@ -33,8 +33,8 @@ Term: Fall 2023
 + **Contribution statement**: ([default](doc/a_note_on_contributions.md))
 	+ Jiaqi Lu: Shiny app design
 	+ Yuqi Liu: Graph: Distribution of Top 5 Disasters by State and Year
-	+ Guanbiao Li: Graph: Distribution of Aid Programs in New York State
-	+ Tianyi Jiang:
+	+ Guanbiao Li:
+	+ Tianyi Jiang: Graph: Distribution of Aid Programs in New York State
 
 Following [suggestions](http://nicercode.github.io/blog/2013-04-05-projects/) by [RICH FITZJOHN](http://nicercode.github.io/about/#Team) (@richfitz). This folder is orgarnized as follows.
 
