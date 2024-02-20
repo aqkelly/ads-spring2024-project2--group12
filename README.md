@@ -2,7 +2,7 @@
 
 ### [Project Description](doc/project2_desc.md)
 
-Term: Fall 2023
+Term: Spring 2024
 
 <img width="748" alt="Screenshot 2024-02-20 at 5 44 51 PM" src="https://github.com/aqkelly/project2-shinyapp-group12/assets/145166784/bfb3e076-bdb5-4742-97a0-fac2252ef31a">
 
@@ -20,7 +20,7 @@ The **learning goals** for this project is:
 *The above general statement about project 2 can be removed once you are finished with your project. It is optional.
 
 ## Project 2 Shiny App
-Term: Fall 2023
+Term: Spring 2024
 
 + Team # 12
 + **Projec title**: + Disaster Declarations Summaries
@@ -36,7 +36,7 @@ Term: Fall 2023
 + **Contribution statement**: ([default](doc/a_note_on_contributions.md))
 	+ Jiaqi Lu: Shiny app design
 	+ Yuqi Liu: Graph: Distribution of Top 5 Disasters by State and Year
-	+ Guanbiao Li: Graph: New York Region - Total Number of Incidents by County
+	+ Guanbiao Li: Graph: New York State - Informatin of House Owners
 	+ Tianyi Jiang: Graph: Distribution of Aid Programs in New York State
 
 Following [suggestions](http://nicercode.github.io/blog/2013-04-05-projects/) by [RICH FITZJOHN](http://nicercode.github.io/about/#Team) (@richfitz). This folder is orgarnized as follows.
