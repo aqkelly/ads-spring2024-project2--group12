@@ -4,7 +4,8 @@
 
 Term: Fall 2023
 
-![screenshot](doc/figs/map.jpg)
+<img width="748" alt="Screenshot 2024-02-20 at 5 44 51 PM" src="https://github.com/aqkelly/project2-shinyapp-group12/assets/145166784/bfb3e076-bdb5-4742-97a0-fac2252ef31a">
+
 
 In this second project of GR5243 Applied Data Science, we develop a *Exploratory Data Analysis and Visualization* shiny app using one of **the OpenFEMA data sets** of your choice. See [Project 2 Description](doc/project2_desc.md) for more details.  
 
