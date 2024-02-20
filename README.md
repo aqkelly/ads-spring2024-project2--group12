@@ -36,7 +36,7 @@ Term: Spring 2024
 + **Contribution statement**: ([default](doc/a_note_on_contributions.md))
 	+ Jiaqi Lu: Shiny app design
 	+ Yuqi Liu: Graph: Distribution of Top 5 Disasters by State and Year
-	+ Guanbiao Li: Graph: New York State - Informatin of House Owners
+	+ Guanbiao Li: Graph: New York State - Information of House Owners
 	+ Tianyi Jiang: Graph: Distribution of Aid Programs in New York State
 
 Following [suggestions](http://nicercode.github.io/blog/2013-04-05-projects/) by [RICH FITZJOHN](http://nicercode.github.io/about/#Team) (@richfitz). This folder is orgarnized as follows.
