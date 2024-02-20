@@ -31,7 +31,7 @@ Term: Fall 2023
 
 + **Shiny App Link**: https://dataevan.shinyapps.io/Shinyapp-12/
 	
-+ **Project summary**: We aim to develop a mobile application specifically designed for government agencies, enabling them to summarize and analyze historical disaster data swiftly. This application will facilitate these agencies in conducting comprehensive analyses of past disasters, which, in turn, will inform their decision-making processes regarding funding allocations and budgeting strategies. By leveraging this data, the government can make more informed decisions, optimize the allocation of resources to areas most in need, and improve disaster response and preparedness strategies.
++ **Project summary**: We are dedicated to developing a mobile application specifically designed for New York State government agencies, aimed at efficiently summarizing and analyzing historical disaster data. This tailored application is poised to be particularly beneficial for the New York State Individual Housing Program, offering house owners precise and appropriate funding assistance based on comprehensive data analysis. This ensures that the allocation of funds is directly aligned with the specific needs uncovered, greatly enhancing the effectiveness and efficiency of disaster management and recovery efforts for individual homeowners.
 
 + **Contribution statement**: ([default](doc/a_note_on_contributions.md))
 	+ Jiaqi Lu: Shiny app design
