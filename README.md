@@ -29,7 +29,7 @@ Term: Spring 2024
 	+ Guanbiao Li
 	+ Tianyi Jiang
 
-+ **Shiny App Link**: https://dataevan.shinyapps.io/Shinyapp-12/
++ **Shiny App Link**: https://dataevan.shinyapps.io/project_2_data_analysis/
 	
 + **Project summary**: We are dedicated to developing a mobile application specifically designed for New York State government agencies, aimed at efficiently summarizing and analyzing historical disaster data. This tailored application is poised to be particularly beneficial for the New York State Individual Housing Program, offering house owners precise and appropriate funding assistance based on comprehensive data analysis. This ensures that the allocation of funds is directly aligned with the specific needs uncovered, greatly enhancing the effectiveness and efficiency of disaster management and recovery efforts for individual homeowners.
 
